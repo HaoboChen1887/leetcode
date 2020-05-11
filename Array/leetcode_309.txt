@@ -1,0 +1,22 @@
+buy[i] 第i天之前为买，此时的最大收益
+sell[i] 第i天之前为卖，此时的最大收益
+rest[i] 第i天之前为CD，此时的最大收益
+
+buy[i] = max(rest[i - 1] - price, buy[i - 1])
+	前一天为CD的收益减当天买入的cost
+	前一天买入的最大收益
+sell[i] = max(buy[i - 1] + price, sell[i - 1])
+	前一天买入的最大收益加卖出的价钱
+	前一天卖出的最大收益，即当天未持有股票且在CD内，直接传递给当天
+rest[i] = max(sell[i - 1], buy[i - 1], rest[i - 1])
+	前一天为卖出的最大收益，即在CD内
+	前一天为买入的最大收益，不存在的情况，直接传递给当天
+	前一天为CD的最大收益，直接传递给当天
+
+由于buy[i] <= rest[i]
+rest[i] = max(sell[i - 1], rest[i - 1])
+
+由于rest[i] = sell[i - 1]
+化简为
+buy[i] = max(sell[i - 2] - price, buy[i - 1])
+sell[i] = max(buy[i - 1] + price, sell[i - 1])

@@ -1,0 +1,12 @@
+解法一
+维持两个指针m1, m2初始化为INT_MAX
+如果m1大于nums[i]，将nums[i]赋给m1
+如果m1小于nums[i]并且m2大于nums[i]，将nums[i]赋给m2
+在整个过程中不断将m1, m2尽可能的赋为更小的值
+任何时候nums[i]大于m2返回true,遍历完成返回false
+
+解法二
+维持两个数组forward, backward
+forward记录nums[i]之前最小的数
+backward记录nums[i]之后最大的数
+只要存在满足forward[i] < nums[i] < backward[i]的数返回true
