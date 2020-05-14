@@ -1,10 +1,10 @@
-#!/usr/bin/env python3
 import sys
 import os
 import re
 import click
 
-CHMOD_IGNORE = ['env', 'filegen']
+CHMOD_IGNORE = [os.path.join('.', ig) for ig in ['env', 'filegen', '.git', 'filegen.egg-info']]
+print(CHMOD_IGNORE)
 
 @click.command()
 @click.argument('ctg', nargs=1, required=False)
@@ -22,8 +22,8 @@ def main(ctg, prob, chmod):
 
 def change_mode():
     for root, dirs, files in os.walk("."):
-        if root not in CHMOD_IGNORE:
-            for f_name in files:
+        for f_name in files:
+            if re.search(r'^\d+\.py|^\d+\.txt', f_name):
                 click.echo('chmod +rw ' + f_name)
                 os.chmod(os.path.join(root, f_name), 0o666)
 
