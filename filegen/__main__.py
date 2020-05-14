@@ -3,9 +3,6 @@ import os
 import re
 import click
 
-CHMOD_IGNORE = [os.path.join('.', ig) for ig in ['env', 'filegen', '.git', 'filegen.egg-info']]
-print(CHMOD_IGNORE)
-
 @click.command()
 @click.argument('ctg', nargs=1, required=False)
 @click.argument('prob', nargs=1, required=False)
