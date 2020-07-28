@@ -9,7 +9,7 @@ class Solution:
     
     # Note: the difference from search_in_rotated_sorted_array is this problem allows duplicates
     # this result in cases like [1, 1, 3, 1], there will be problem when determine sections to go to
-    # to solve the problem, we simply need to move the right pointer until nums[left] != nums[right]
+    # to solve the problem, we simply need to move the right pointer until nums[mid] != nums[right]
     def search(self, nums: List[int], target: int) -> int:
         left, right = 0, len(nums) - 1
         while left <= right:

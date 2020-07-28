@@ -1,10 +1,25 @@
+dp:
+120
+312
+97
+174
+85
+363
+10
+44
+
+linked list:
 160, not best
 142
 25
 61, not best, edge cases
 147
 179
+
+binary search:
 278
 33
 35
 81
+162
+34, edge cases
