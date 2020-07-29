@@ -26,7 +26,7 @@ class Solution:
                         if not 0 <= x < m or not 0 <= y < n or visited[x][y] or grid[x][y] == '0':
                             continue
                         visited[x][y] = True
-                        q.appendleft(x * n + y)
+                        q.append(x * n + y)
         return res
         
     # dfs: maintain a visited matrix, for every location that is not water and is not visited

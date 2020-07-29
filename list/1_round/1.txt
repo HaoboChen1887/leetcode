@@ -31,3 +31,9 @@ binary search:
 
 BFS/DFS:
 200
+286
+130, not best
+364
+127
+51
+52
