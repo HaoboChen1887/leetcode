@@ -37,3 +37,9 @@ BFS/DFS:
 127
 51
 52
+126
+
+stack/queue
+155
+225
+388, optimal solution unrelated to catagory
