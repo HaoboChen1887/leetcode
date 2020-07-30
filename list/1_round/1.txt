@@ -43,3 +43,6 @@ stack/queue
 155
 225
 388, optimal solution unrelated to catagory
+394
+224
+227
