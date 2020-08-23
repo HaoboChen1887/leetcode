@@ -64,3 +64,11 @@ design:
 362, not optimal
 281, not optimal
 284
+
+string:
+205
+345, not optimal
+14
+28
+293
+294
